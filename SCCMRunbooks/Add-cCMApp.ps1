@@ -213,7 +213,7 @@ if($Deploy){
     if($DisttributionPointName){
         Start-CMContentDistribution -Application $app -DistributionPointName $DistributionPointName
     }
-    Start-CMContentDistribution -Application $app -DistributionPointName 'server-sccm.domain.zol.be'
+
     Start-CMApplicationDeployment -Name $app.LocalizedDisplayName -DeployAction Install -CollectionName $devcolnamei -DeployPurpose Required
     Start-CMApplicationDeployment -Name $app.LocalizedDisplayName -DeployAction Install -CollectionName $usrcolnamei -DeployPurpose Required
     Start-CMApplicationDeployment -Name $app.LocalizedDisplayName -DeployAction UnInstall -CollectionName $devcolnameu
